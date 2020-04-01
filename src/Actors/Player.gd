@@ -1,17 +1,16 @@
 extends Actor
-
 class_name Player
 
 func _ready():
 	pass 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Movement
 	var axis = get_input_axis()
 	if axis == Vector2.ZERO:
-		apply_friction(ACCELERATION * delta)
+		apply_friction(ACCELERATION * _delta)
 	else:
-		self.apply_movement(axis * ACCELERATION * delta)
+		self.apply_movement(axis * ACCELERATION * _delta)
 		
 	self.motion = move_actor(self.motion)
 	
@@ -26,9 +25,4 @@ func get_input_axis():
 	return axis.normalized()
 
 
-func apply_friction(amount):
-	if self.motion.length() > amount:
-		self.motion -= self.motion.normalized() * amount
-	else: 
-		self.motion = Vector2.ZERO
-	
+
