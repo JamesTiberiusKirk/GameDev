@@ -1,21 +1,11 @@
 extends Actor
 class_name Player
 
-func _ready():
-	pass 
-
-func _physics_process(_delta):
-	# Movement
+func _physics_process(delta):
 	var axis = get_input_axis()
-	if axis == Vector2.ZERO:
-		apply_friction(ACCELERATION * _delta)
-	else:
-		self.apply_movement(axis * ACCELERATION * _delta)
-		
-	self.motion = move_actor(self.motion)
-	
-	var look_vec = get_global_mouse_position() - global_position
-	self.look_at(look_vec)
+	print(axis)
+	self.apply_direction(axis)
+	self.look_at(get_look_vect())
 	pass
 
 func get_input_axis():
@@ -24,5 +14,7 @@ func get_input_axis():
 	axis.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
 	return axis.normalized()
 
+func get_look_vect():
+	return get_global_mouse_position() - global_position
 
 
