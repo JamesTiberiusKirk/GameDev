@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/characters/enemies/SoldierEmpty.png" type="Texture" id=1]
-[ext_resource path="res://scenes/actors/AI_melee/AI_melee.gd" type="Script" id=2]
+[ext_resource path="res://scenes/actors/AI_melee/AI_melee.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/enemies/SoldierEmpty.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 18.6792 )
@@ -9,7 +9,7 @@ extents = Vector2( 10, 18.6792 )
 [node name="AI_melee" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 11
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 detect_radius = 236
 fire_rate = 1.0
 
@@ -21,7 +21,7 @@ shape = SubResource( 1 )
 position = Vector2( 3.0105, 4.527 )
 rotation = 1.5708
 scale = Vector2( 0.597463, 0.553315 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="AttackTimer" type="Timer" parent="."]
 
