@@ -1,5 +1,13 @@
 extends Actor_ranged
 
+onready var ShootTimer = $ShootTimer
+var can_shoot = true
+
+export (float) var fire_rate
+
+func _ready():
+	ShootTimer.wait_time = fire_rate
+
 func _physics_process(delta):
 	var axis = get_input_axis()
 	handle_shooting()
@@ -9,10 +17,13 @@ func _physics_process(delta):
 	pass
 
 func handle_shooting():
-
+	
 	if Input.is_action_pressed("shoot"):
-		var dir = get_look_vect()
-		self.shoot(dir)
+		if can_shoot:
+			var dir = get_look_vect()
+			self.shoot(dir)
+			can_shoot = false
+			ShootTimer.start()
 
 func get_input_axis():
 	var axis = Vector2.ZERO
@@ -22,3 +33,6 @@ func get_input_axis():
 
 func get_look_vect():
 	return get_global_mouse_position() - global_position
+
+func _on_ShootTimer_timeout():
+	can_shoot = true

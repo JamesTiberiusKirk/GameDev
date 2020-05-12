@@ -1,17 +1,17 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/characters/vhaal/body/sprite_1.png" type="Texture" id=1]
-[ext_resource path="res://assets/characters/vhaal/body/sprite_2.png" type="Texture" id=2]
-[ext_resource path="res://assets/characters/vhaal/body/sprite_0.png" type="Texture" id=3]
-[ext_resource path="res://assets/characters/vhaal/body/sprite_3.png" type="Texture" id=4]
-[ext_resource path="res://scenes/actors/Player/Player.gd" type="Script" id=5]
+[ext_resource path="res://scenes/actors/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/vhaal/body/sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/vhaal/body/sprite_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/vhaal/body/sprite_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/characters/vhaal/body/sprite_3.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 40 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0
@@ -21,7 +21,8 @@ animations = [ {
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
-script = ExtResource( 5 )
+script = ExtResource( 1 )
+fire_rate = 0.246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4, -2 )
@@ -39,3 +40,6 @@ anims/run = SubResource( 3 )
 
 [node name="Gun" type="Position2D" parent="."]
 position = Vector2( 27.9544, 23.3304 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
