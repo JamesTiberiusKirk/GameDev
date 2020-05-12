@@ -33,9 +33,10 @@ func apply_stopping_friction(amount):
 	else: 
 		motion = Vector2.ZERO
 
-#func move_to_global_pos(pos):
-#	while get_global_position() != pos:
-#		apply_acceleration(pos - )
+func move_to_global_pos(target):
+	if (target - position).length() > 0.5:
+		motion = (target - position).normalized() * max_speed
+		motion = move_and_slide(motion)
 		
 func look_at(look_vec):
 	global_rotation = atan2(look_vec.y, look_vec.x)
