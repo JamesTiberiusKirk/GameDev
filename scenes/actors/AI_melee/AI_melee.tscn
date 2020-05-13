@@ -4,23 +4,23 @@
 [ext_resource path="res://assets/characters/enemies/SoldierEmpty.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 18.6792 )
+extents = Vector2( 9.8463, 15.4276 )
 
 [node name="AI_melee" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 11
 script = ExtResource( 1 )
 detect_radius = 236
-fire_rate = 1.0
+attack_delay = 1.07
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.786316, 0.0357018 )
+position = Vector2( 0.641037, 0.0357018 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 3.0105, 4.527 )
 rotation = 1.5708
-scale = Vector2( 0.597463, 0.553315 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="AttackTimer" type="Timer" parent="."]
@@ -30,6 +30,6 @@ collision_layer = 32
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visibility"]
-[connection signal="timeout" from="AttackTimer" to="." method="_on_ShootTimer_timeout"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
