@@ -10,7 +10,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if collision.collider.has_method("deal_dmg"):
-			collision.collider.deal_dmg()
+			collision.collider.deal_dmg(30)
 			queue_free()
 		else:
 			if bounce_count < BOUNCE_LIMIT:

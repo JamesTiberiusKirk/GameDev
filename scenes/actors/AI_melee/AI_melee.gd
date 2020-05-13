@@ -11,13 +11,15 @@ var velocity
 var can_attack = false
 
 onready var attack_timer = $AttackTimer
+onready var health_bar = $HealthBar
 
 func _ready():
-	var shape = CircleShape2D.new()
-	shape.radius = detect_radius
-	$Visibility/CollisionShape2D.shape = shape
+	var vision_shape = CircleShape2D.new()
+	vision_shape.radius = detect_radius
+	$Visibility/CollisionShape2D.shape = vision_shape
 	max_speed = 100
 	attack_timer.wait_time = attack_delay
+	
 
 func _physics_process(delta):
 	update()

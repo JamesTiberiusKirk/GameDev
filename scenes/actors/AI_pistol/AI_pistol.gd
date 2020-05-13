@@ -13,6 +13,8 @@ var t_last_known
 var velocity 
 var can_attack = true
 
+var rng = RandomNumberGenerator.new()
+
 func _ready():
 	shoot_timer.wait_time = fire_rate
 
@@ -75,3 +77,6 @@ func _on_Visibility_body_exited(body):
 
 func _on_ShootTimer_timeout():
 	can_attack = true
+
+func _on_WarmUpTimer_timeout():
+	pass # Replace with function body.

@@ -8,6 +8,8 @@ var acceleration = 5000
 
 var direction: = Vector2()
 var motion = Vector2.ZERO
+var bounce_countdown = 0
+var rng = RandomNumberGenerator.new()
 
 func _physics_process(delta):
 	if direction == Vector2.ZERO:
@@ -33,13 +35,19 @@ func apply_stopping_friction(amount):
 
 func move_to_global_pos(target):
 	if (target - position).length() > 0.5:
-		motion = (target - position).normalized() * max_speed
+		var dir = (target - position).normalized()
+		motion = dir * max_speed
 		motion = move_and_slide(motion)
+		#for i in get_slide_count():
+		#	var collision = get_slide_collision(i)
+		#	print(collision.collider.name)
+		#	if collision != null and collision.collider.name == "TileMap":
+		#		pass
 
 func look_at(look_vec):
 	global_rotation = atan2(look_vec.y, look_vec.x)
 
-func deal_dmg():
-	health -= 10
-	if health <=0 :
+func deal_dmg(amount: int):
+	health -= amount
+	if health <= 0 :
 		queue_free()
