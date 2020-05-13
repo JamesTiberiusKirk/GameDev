@@ -1,6 +1,7 @@
-extends Actor_ranged
+extends Actor
 
-onready var ShootTimer = $ShootTimer
+onready var ShootTimer = $ShootTimer#
+onready var bullet = preload("res://scenes/objects/Bullet/Bullet.tscn")
 var can_shoot = true
 
 export (float) var fire_rate
@@ -11,17 +12,20 @@ func _ready():
 func _physics_process(delta):
 	var axis = get_input_axis()
 	handle_shooting()
-
 	self.apply_direction(axis)
 	self.look_at(get_look_vect())
 	pass
 
+func shoot(dir):
+	var b = bullet.instance()
+	get_parent().add_child(b)
+	b.fire($Gun.global_position, dir.angle())
+
 func handle_shooting():
-	
 	if Input.is_action_pressed("shoot"):
 		if can_shoot:
 			var dir = get_look_vect()
-			self.shoot(dir)
+			shoot(dir)
 			can_shoot = false
 			ShootTimer.start()
 
@@ -36,3 +40,5 @@ func get_look_vect():
 
 func _on_ShootTimer_timeout():
 	can_shoot = true
+
+ 

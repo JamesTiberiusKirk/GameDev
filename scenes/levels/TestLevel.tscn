@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/actors/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilemaps.png" type="Texture" id=2]
-[ext_resource path="res://scenes/actors/AI_melee/AI_melee.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/actors/AI_pistol/AI_pistol.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -98,5 +98,5 @@ tile_data = PoolIntArray( 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 
 position = Vector2( 333.147, 172.485 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="AI_melee" parent="." instance=ExtResource( 3 )]
-position = Vector2( 658.313, 399.506 )
+[node name="AI_pistol" parent="." instance=ExtResource( 3 )]
+position = Vector2( 664.822, 444.381 )

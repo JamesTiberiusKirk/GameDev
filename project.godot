@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Actor",
 "language": "GDScript",
 "path": "res://scenes/actors/Actor.gd"
-}, {
-"base": "Actor",
-"class": "Actor_ranged",
-"language": "GDScript",
-"path": "res://scenes/actors/Actor_ranged.gd"
 } ]
 _global_script_class_icons={
-"Actor": "",
-"Actor_ranged": ""
+"Actor": ""
 }
 
 [application]
@@ -64,7 +58,8 @@ shoot={
 2d_physics/layer_3="Enemies"
 2d_physics/layer_4="Bullets"
 2d_physics/layer_5="Items"
-2d_physics/layer_6="Enemie_range"
+2d_physics/layer_6="Enemy_range"
+2d_physics/layer_7="Enemy_bullets"
 
 [rendering]
 
