@@ -4,6 +4,7 @@ export (float) var fire_rate#
 export (int) var detect_radius
 
 onready var shoot_timer = $ShootTimer
+onready var health_bar = $HealthBar
 onready var bullet = preload("res://scenes/objects/EnemyBullet/EnemyBullet.tscn")
 
 var vis_color = Color(.867, .91, .247, 0.1)
@@ -12,8 +13,6 @@ var target
 var t_last_known 
 var velocity 
 var can_attack = true
-
-var rng = RandomNumberGenerator.new()
 
 func _ready():
 	shoot_timer.wait_time = fire_rate
@@ -38,6 +37,7 @@ func _physics_process(delta):
 			t_last_known = null
 		else:
 			move_to_global_pos(t_last_known)
+	health_bar.value = health
 
 func shoot(dir):
 	var b = bullet.instance()

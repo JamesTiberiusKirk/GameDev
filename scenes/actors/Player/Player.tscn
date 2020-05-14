@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/actors/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_0.png" type="Texture" id=2]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_2.png" type="Texture" id=4]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_3.png" type="Texture" id=5]
+[ext_resource path="res://scenes/objects/HealthBar/HealthBar.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 40 )
+extents = Vector2( 25.2638, 31.9221 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -29,8 +30,9 @@ position = Vector2( -4, -2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( -1, 3 )
+position = Vector2( 0.257027, 0.257027 )
 rotation = 1.57079
+scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 2 )
 animation = "Run"
 offset = Vector2( 9, -11 )
@@ -39,7 +41,14 @@ offset = Vector2( 9, -11 )
 anims/run = SubResource( 3 )
 
 [node name="Gun" type="Position2D" parent="."]
-position = Vector2( 27.9544, 23.3304 )
+position = Vector2( 19.0998, 14.4758 )
 
 [node name="ShootTimer" type="Timer" parent="."]
+
+[node name="HealthBar" parent="." instance=ExtResource( 6 )]
+margin_left = -29.4763
+margin_top = 30.294
+margin_right = 0.523697
+margin_bottom = 36.294
+rect_scale = Vector2( 1.67832, 1.47195 )
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

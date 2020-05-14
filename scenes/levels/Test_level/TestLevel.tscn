@@ -21,4 +21,5 @@ position = Vector2( 333.147, 172.485 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="AI_melee" parent="." instance=ExtResource( 3 )]
-position = Vector2( 667.155, 446.714 )
+position = Vector2( 717.308, 445.547 )
+patrol_delay = 2

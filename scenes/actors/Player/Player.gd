@@ -1,6 +1,7 @@
 extends Actor
 
-onready var ShootTimer = $ShootTimer#
+onready var ShootTimer = $ShootTimer
+onready var health_bar = $HealthBar
 onready var bullet = preload("res://scenes/objects/Bullet/Bullet.tscn")
 var can_shoot = true
 
@@ -14,7 +15,7 @@ func _physics_process(delta):
 	handle_shooting()
 	self.apply_direction(axis)
 	self.look_at(get_look_vect())
-	pass
+	health_bar.value = health
 
 func shoot(dir):
 	var b = bullet.instance()
