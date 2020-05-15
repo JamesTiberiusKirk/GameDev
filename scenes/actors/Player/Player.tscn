@@ -54,6 +54,7 @@ rect_scale = Vector2( 1.67832, 1.47195 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 1.5, 1.5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

@@ -11,7 +11,6 @@ extents = Vector2( 9.8463, 15.4276 )
 collision_layer = 4
 collision_mask = 11
 script = ExtResource( 1 )
-detect_radius = 236
 attack_delay = 1.07
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

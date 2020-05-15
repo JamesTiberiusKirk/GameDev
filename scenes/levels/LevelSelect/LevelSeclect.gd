@@ -21,3 +21,7 @@ func _on_Back_pressed():
 func _on_TestLevel_pressed():
 	get_tree().change_scene("res://scenes/levels/Test_level/TestLevel.tscn")
 
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://scenes/levels/Level1/Level1.tscn")

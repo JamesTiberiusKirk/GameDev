@@ -1,8 +1,9 @@
 extends KinematicBody2D
 class_name Actor
 
-var health = 100
+signal actor_killed(obj)
 
+var health = 100
 var max_speed = 500
 var acceleration = 5000
 
@@ -50,4 +51,5 @@ func look_at(look_vec):
 func deal_dmg(amount: int):
 	health -= amount
 	if health <= 0 :
+		emit_signal("actor_killed", self)
 		queue_free()

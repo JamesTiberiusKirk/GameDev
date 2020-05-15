@@ -1,6 +1,6 @@
 extends Actor
 
-export (int) var detect_radius
+export (int) var detect_radius = 450
 export (float) var attack_delay
 export (int) var patrol_delay
 
