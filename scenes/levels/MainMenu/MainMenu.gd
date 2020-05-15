@@ -1,7 +1,7 @@
 extends Control
 
 func _on_NewGame_pressed():
-	get_tree().change_scene("res://scenes/levels/Test_level/TestLevel.tscn")
+	get_tree().change_scene("res://scenes/levels/Level1/Level1.tscn")
 
 
 func _on_ChooseLevel_pressed():
