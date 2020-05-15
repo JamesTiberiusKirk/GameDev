@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/levels/LevelSelect/LevelSeclect.gd" type="Script" id=1]
+[ext_resource path="res://assets/mainmenu/level_select.png" type="Texture" id=2]
+
+[node name="LevelSeclect" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="LevelSelect" type="VBoxContainer" parent="."]
+margin_left = 81.2745
+margin_top = 123.944
+margin_right = 158.274
+margin_bottom = 167.944
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelSelect"]
+margin_right = 77.0
+margin_bottom = 44.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelSelect/HBoxContainer"]
+margin_right = 77.0
+margin_bottom = 44.0
+
+[node name="Back" type="Button" parent="LevelSelect/HBoxContainer/VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 20.0
+text = "Back"
+flat = true
+align = 0
+
+[node name="TestLevel" type="Button" parent="LevelSelect/HBoxContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 77.0
+margin_bottom = 44.0
+text = "Test Level"
+flat = true
+align = 0
+[connection signal="pressed" from="LevelSelect/HBoxContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="LevelSelect/HBoxContainer/VBoxContainer/TestLevel" to="." method="_on_TestLevel_pressed"]

@@ -21,7 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Dev"
-run/main_scene="res://scenes/levels/Test_level/TestLevel.tscn"
+run/main_scene="res://scenes/levels/MainMenu/MainMenu.tscn"
+
+[display]
+
+window/size/width=1200
+window/size/height=628
 
 [input]
 

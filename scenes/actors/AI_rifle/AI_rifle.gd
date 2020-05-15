@@ -1,7 +1,7 @@
 extends Actor
 
-export (float) var fire_rate = 0.7
-export (int) var detect_radius = 400
+export (float) var fire_rate = 0.3
+export (int) var detect_radius = 450
 
 onready var shoot_timer = $ShootTimer
 onready var health_bar = $HealthBar
@@ -12,10 +12,9 @@ onready var bullet = preload("res://scenes/objects/EnemyBullet/EnemyBullet.tscn"
 var vis_color = Color(.867, .91, .247, 0.1)
 var hit_pos
 var target
-var t_last_known 
-var velocity 
+var t_last_known
+var velocity
 var can_attack = true
-var can_follow = false
 
 func _ready():
 	shoot_timer.wait_time = fire_rate
@@ -32,18 +31,15 @@ func _physics_process(delta):
 	# if there's a target, rotate towards it and attack
 	if target:
 		if is_in_LOS(target.position):
-			can_follow = false
 			t_last_known = target.position
 			rotation = (target.position - position).angle()
 			attack(rotation)
-		else:
-			can_follow = true 
-	if t_last_known and can_follow:
-		if (t_last_known-position).length() <= 0.5:
-			t_last_known = null
-			can_follow = false
-		else:
-			move_to_global_pos(t_last_known)
+		
+		if t_last_known and not is_in_LOS(target.position):
+			if (t_last_known-position).length() <= 0.5:
+				t_last_known = null
+			else:
+				move_to_global_pos(t_last_known)
 
 
 func shoot(dir):

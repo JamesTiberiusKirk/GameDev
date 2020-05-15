@@ -51,4 +51,6 @@ margin_top = 30.294
 margin_right = 0.523697
 margin_bottom = 36.294
 rect_scale = Vector2( 1.67832, 1.47195 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
