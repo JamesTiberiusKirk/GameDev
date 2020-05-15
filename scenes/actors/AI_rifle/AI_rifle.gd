@@ -59,6 +59,12 @@ func _draw():
 	# Visibility area
 	draw_circle(Vector2(), detect_radius, vis_color)
 
+func move_to_global_pos(target):
+	if (target - position).length() > 0.5:
+		var dir = (target - position).normalized()
+		motion = dir * max_speed
+		motion = move_and_slide(motion)
+
 func is_in_LOS(body) -> bool:
 	# This function checks the line of sight
 	var space_state = get_world_2d().direct_space_state

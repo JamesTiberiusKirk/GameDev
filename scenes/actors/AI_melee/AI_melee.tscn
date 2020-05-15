@@ -12,6 +12,7 @@ collision_layer = 4
 collision_mask = 11
 script = ExtResource( 1 )
 attack_delay = 1.07
+melee_rate = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.641037, 0.0357018 )
@@ -38,7 +39,10 @@ margin_bottom = 23.9663
 [node name="PatrolTimer" type="Timer" parent="."]
 
 [node name="AttackTimer" type="Timer" parent="."]
+
+[node name="MeleeTimer" type="Timer" parent="."]
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_PatrolTimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
+[connection signal="timeout" from="MeleeTimer" to="." method="_on_MeleeTimer_timeout"]

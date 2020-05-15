@@ -45,6 +45,12 @@ func _physics_process(delta):
 		else:
 			move_to_global_pos(t_last_known)
 
+func move_to_global_pos(target):
+	if (target - position).length() > 0.5:
+		var dir = (target - position).normalized()
+		motion = dir * max_speed
+		motion = move_and_slide(motion)
+
 
 func shoot(dir):
 	var b = bullet.instance()

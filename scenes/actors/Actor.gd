@@ -34,17 +34,6 @@ func apply_stopping_friction(amount):
 	else: 
 		motion = Vector2.ZERO
 
-func move_to_global_pos(target):
-	if (target - position).length() > 0.5:
-		var dir = (target - position).normalized()
-		motion = dir * max_speed
-		motion = move_and_slide(motion)
-		#for i in get_slide_count():
-		#	var collision = get_slide_collision(i)
-		#	print(collision.collider.name)
-		#	if collision != null and collision.collider.name == "TileMap":
-		#		pass
-
 func look_at(look_vec):
 	global_rotation = atan2(look_vec.y, look_vec.x)
 
