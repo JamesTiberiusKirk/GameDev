@@ -3,7 +3,7 @@ class_name Actor
 
 var health = 100
 
-var max_speed = 1000
+var max_speed = 500
 var acceleration = 5000
 
 var direction: = Vector2()
