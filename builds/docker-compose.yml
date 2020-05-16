@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: httpd:latest
+    ports: 
+      - "80:80"
+    volumes:
+      - ./HTML/:/usr/local/apache2/htdocs/
