@@ -75,7 +75,6 @@ func move_to_global_pos_and_attack(target):
 		motion = move_and_slide(motion)
 		for i in get_slide_count():
 			var collision = get_slide_collision(i)
-			print(collision.collider.name)
 			if collision != null and collision.collider.name == "Player":
 				if collision.collider.has_method("deal_dmg"):
 					melee_attack(collision.collider)

@@ -9,11 +9,11 @@ func _ready():
 func _on_actor_killed(obj):
 	if obj.name == "Player":
 		print("game over")
-		# Game over screen
+		Autoload.game_over(self)
 	else:
 		death_count += 1
 	
 	if death_count >= AI_ammount:
-		print("Level conplete")
+		print("lvl1 complete")
 		# Next level or Level select
-		get_tree().change_scene("res://scenes/levels/LevelSelect/LevelSeclect.tscn")
+		Autoload.round_win(self)

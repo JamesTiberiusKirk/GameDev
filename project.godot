@@ -21,7 +21,11 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Dev"
-run/main_scene="res://scenes/levels/MainMenu/MainMenu.tscn"
+run/main_scene="res://scenes/screens/MainMenu/MainMenu.tscn"
+
+[autoload]
+
+Autoload="*res://scripts/autoload.gd"
 
 [display]
 

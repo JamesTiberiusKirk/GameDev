@@ -15,13 +15,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_Back_pressed():
-	get_tree().change_scene("res://scenes/levels/MainMenu/MainMenu.tscn")
 
-func _on_TestLevel_pressed():
-	get_tree().change_scene("res://scenes/levels/Test_level/TestLevel.tscn")
+func _on_NextRound_pressed():
+	Autoload.next_round()
 
 
+func _on_MainMenu_pressed():
+	get_tree().change_scene("res://scenes/screens/MainMenu/MainMenu.tscn")
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/levels/Level1/Level1.tscn")

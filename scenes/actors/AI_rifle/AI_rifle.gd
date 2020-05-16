@@ -50,7 +50,6 @@ func shoot(dir):
 func attack(pos):
 	# shoot bullet
 	if can_attack:
-		print("shoot")
 		shoot(pos)
 		shoot_timer.start()
 		can_attack = false
