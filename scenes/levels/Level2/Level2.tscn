@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/actors/AI_pistol/AI_pistol.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/actors/AI_melee/AI_melee.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/actors/Player/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/Level2/Level2.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Levels_EEM.gd" type="Script" id=5]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource( 5 )
@@ -26,7 +26,6 @@ rotation = 4.7281
 [node name="AI_melee2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 236.399, 439.704 )
 rotation = -4.65305
-scale = Vector2( 1, 1 )
 
 [node name="AI_melee3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1011.64, -6.52674 )
@@ -46,12 +45,10 @@ rotation = -3.14159
 [node name="AI_pistol" parent="." instance=ExtResource( 2 )]
 position = Vector2( 403.649, 616.132 )
 rotation = -1.54113
-scale = Vector2( 1, 1 )
 
 [node name="AI_pistol2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 391.478, 431.124 )
 rotation = 0.0122171
-scale = Vector2( 1, 1 )
 
 [node name="AI_pistol3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 509.852, 165.852 )
