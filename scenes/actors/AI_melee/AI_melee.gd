@@ -5,7 +5,7 @@ export (float) var attack_delay
 export (int) var patrol_delay
 export (float) var melee_rate
 
-var vis_color = Color(.867, .91, .247, 0.1)
+var vis_color = Color(.867, .91, .247, 0)
 var hit_pos
 var target
 var t_last_known 

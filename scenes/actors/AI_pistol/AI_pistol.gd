@@ -9,7 +9,7 @@ onready var vis_rad = $Visibility/Radius
 onready var gun = $Gun
 onready var bullet = preload("res://scenes/objects/EnemyBullet/EnemyBullet.tscn")
 
-var vis_color = Color(.867, .91, .247, 0.1)
+var vis_color = Color(.867, .91, .247, 0)
 var hit_pos
 var target
 var t_last_known 
