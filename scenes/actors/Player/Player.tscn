@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/actors/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_0.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/characters/vhaal/body/sprite_2.png" type="Texture" id=4]
 [ext_resource path="res://assets/characters/vhaal/body/sprite_3.png" type="Texture" id=5]
 [ext_resource path="res://scenes/objects/HealthBar/HealthBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/audio/silencer.wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.2638, 31.9221 )
@@ -57,4 +58,7 @@ current = true
 zoom = Vector2( 1.5, 1.5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

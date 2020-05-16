@@ -21,6 +21,7 @@ onready var attack_timer = $AttackTimer
 onready var health_bar = $HealthBar
 onready var patrol_timer = $PatrolTimer
 onready var melee_timer = $MeleeTimer
+onready var slash_sound = $SlashSound
 
 func _ready():
 	var vision_shape = CircleShape2D.new()
@@ -34,7 +35,6 @@ func _ready():
 func _physics_process(delta):
 	update()
 	health_bar.value = health
-
 	if target:
 		if is_in_LOS(target.position):
 			t_last_known = target.position
@@ -81,6 +81,7 @@ func move_to_global_pos_and_attack(target):
 
 func melee_attack(obj):
 	if can_melee:
+		slash_sound.play()
 		obj.deal_dmg(10)
 		can_melee = false
 		melee_timer.start()

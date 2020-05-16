@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/actors/AI_melee/AI_melee.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/enemies/SoldierEmpty.png" type="Texture" id=2]
 [ext_resource path="res://scenes/objects/HealthBar/HealthBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/audio/Knife-Stab.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.8463, 15.4276 )
@@ -41,6 +42,10 @@ margin_bottom = 23.9663
 [node name="AttackTimer" type="Timer" parent="."]
 
 [node name="MeleeTimer" type="Timer" parent="."]
+
+[node name="SlashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+[connection signal="actor_killed" from="." to="." method="_on_AI_melee_actor_killed"]
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_PatrolTimer_timeout"]

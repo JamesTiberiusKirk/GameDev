@@ -41,4 +41,5 @@ func deal_dmg(amount: int):
 	health -= amount
 	if health <= 0 :
 		emit_signal("actor_killed", self)
+		Sounds.play_death_sound()
 		queue_free()

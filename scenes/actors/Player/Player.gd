@@ -2,6 +2,7 @@ extends Actor
 
 onready var ShootTimer = $ShootTimer
 onready var health_bar = $HealthBar
+onready var shooting_sound = $ShootingSound
 onready var bullet = preload("res://scenes/objects/Bullet/Bullet.tscn")
 var can_shoot = true
 
@@ -18,6 +19,7 @@ func _physics_process(delta):
 	health_bar.value = health
 
 func shoot(dir):
+	shooting_sound.play()
 	var b = bullet.instance()
 	get_parent().add_child(b)
 	b.fire($Gun.global_position, dir.angle())
