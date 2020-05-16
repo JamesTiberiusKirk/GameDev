@@ -7,6 +7,7 @@ onready var shoot_timer = $ShootTimer
 onready var health_bar = $HealthBar
 onready var vis_rad = $Visibility/Radius
 onready var gun = $Gun
+onready var shooting_sounds = $ShootingSound
 onready var bullet = preload("res://scenes/objects/EnemyBullet/EnemyBullet.tscn")
 
 var vis_color = Color(.867, .91, .247, 0)
@@ -43,6 +44,7 @@ func _physics_process(delta):
 
 
 func shoot(dir):
+	shooting_sounds.play()
 	var b = bullet.instance()
 	get_parent().add_child(b)
 	b.fire(gun.global_position, dir)

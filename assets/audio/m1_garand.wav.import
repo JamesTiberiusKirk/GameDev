@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/m1_garand.wav-cc3cd86b49f9337dd8c7e714fc39201b.sample"
+
+[deps]
+
+source_file="res://assets/audio/m1_garand.wav"
+dest_files=[ "res://.import/m1_garand.wav-cc3cd86b49f9337dd8c7e714fc39201b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

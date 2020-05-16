@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/actors/AI_rifle/AI_rifle.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/enemies/SoldierRifle.png" type="Texture" id=2]
 [ext_resource path="res://scenes/objects/HealthBar/HealthBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/audio/m1_garand.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.0604, 17.4818 )
@@ -40,6 +41,10 @@ margin_left = -7.36328
 margin_top = 20.455
 margin_right = 22.6367
 margin_bottom = 26.455
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+attenuation = 0.297302
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
