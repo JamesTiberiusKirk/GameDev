@@ -91,6 +91,3 @@ func _on_Visibility_body_exited(body):
 
 func _on_ShootTimer_timeout():
 	can_attack = true
-
-func _on_WarmUpTimer_timeout():
-	pass # Replace with function body.
