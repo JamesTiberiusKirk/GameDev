@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/screens/HUD/HUD.gd" type="Script" id=1]
+
+[node name="HUD" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 29.9704, 15.7185 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EnemyCount" type="Label" parent="CanvasLayer"]
+margin_left = 307.497
+margin_top = 20.4444
+margin_right = 307.497
+margin_bottom = 34.4444
+__meta__ = {
+"_edit_use_anchors_": false
+}
