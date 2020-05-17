@@ -18,13 +18,49 @@ tile_data = PoolIntArray( -3080193, 5, 0, -3145728, 5, 0, -3145727, 5, 0, -31457
 position = Vector2( 94.8227, 547.943 )
 
 [node name="AI_melee" parent="." instance=ExtResource( 3 )]
-position = Vector2( 429.999, 337.543 )
+position = Vector2( 348.968, 396.474 )
 
 [node name="AI_melee2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 801.451, 319.666 )
+position = Vector2( 1421.45, 272.666 )
+rotation = -1.56731
 
 [node name="AI_melee3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 798.587, 235.179 )
+position = Vector2( 753.587, 413.179 )
 
 [node name="AI_melee4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 810.043, 160.716 )
+position = Vector2( 758.043, 96.716 )
+
+[node name="AI_melee5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 909.82, 32.4273 )
+rotation = -1.56905
+
+[node name="AI_melee6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1151.72, 33.9792 )
+rotation = -1.57952
+
+[node name="AI_melee7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 296.721, -24.7912 )
+
+[node name="AI_melee8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 293.038, -87.4058 )
+
+[node name="AI_melee9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 296.721, -151.248 )
+
+[node name="AI_melee10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 414.584, -89.8613 )
+rotation = 3.16952
+
+[node name="AI_melee11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1428.88, 29.4998 )
+rotation = -1.5708
+scale = Vector2( 1, 1 )
+
+[node name="AI_melee12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1660.89, 34.2628 )
+rotation = -1.57952
+
+[node name="AI_melee13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1703.37, 276.367 )
+rotation = -1.56905
+scale = Vector2( 1, 1 )
