@@ -6,3 +6,4 @@ var health
 
 var is_doc_retrieval = false
 var doc_picked_up = false
+var objective_complete = false
