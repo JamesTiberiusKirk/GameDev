@@ -1,5 +1,9 @@
 extends Level
 
+func _ready():
+	if not Sounds.is_main_menu_music_playing:
+		Sounds.play_main_menu_music()
+
 func _process(delta):
 	update_HUD()
 	check_objective()

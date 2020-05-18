@@ -4,6 +4,10 @@ extends Level
 
 var can_play_doc_sound = true
 
+func _ready():
+	if not Sounds.is_compat_music_playing:
+		Sounds.play_combat_music()
+
 func _process(delta):
 	var doc = not check_for_doc() 
 	update_HUD(doc)

@@ -10,7 +10,6 @@ var can_play_car_sound= true
 signal reset_HUD()
 
 func _ready():
-	#Sounds.stop_main_menu_music()
 	AI_total = check_for_AI()
 	AI_ammount = check_for_AI()
 	
