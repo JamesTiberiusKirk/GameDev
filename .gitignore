@@ -13,3 +13,4 @@ mono_crash.*.json
 
 builds/Linux
 builds/Windows
+builds/*.zip
