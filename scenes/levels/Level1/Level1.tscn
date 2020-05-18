@@ -54,7 +54,6 @@ rotation = 3.16952
 [node name="AI_melee11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1428.88, 29.4998 )
 rotation = -1.5708
-scale = Vector2( 1, 1 )
 
 [node name="AI_melee12" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1660.89, 34.2628 )
@@ -63,4 +62,3 @@ rotation = -1.57952
 [node name="AI_melee13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1703.37, 276.367 )
 rotation = -1.56905
-scale = Vector2( 1, 1 )

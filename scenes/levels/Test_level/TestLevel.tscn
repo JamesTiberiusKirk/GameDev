@@ -6,7 +6,7 @@
 [ext_resource path="res://scripts/Levels_EEM.gd" type="Script" id=4]
 [ext_resource path="res://scenes/actors/AI_rifle/AI_rifle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/actors/AI_melee/AI_melee.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/screens/HUD/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/objects/Document/Document.tscn" type="PackedScene" id=7]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource( 4 )
@@ -27,4 +27,5 @@ position = Vector2( 197.055, 434.351 )
 position = Vector2( 194.161, 302.973 )
 detect_radius = 450
 
-[node name="HUD" parent="." instance=ExtResource( 7 )]
+[node name="Document" parent="." instance=ExtResource( 7 )]
+position = Vector2( 947.227, 189.972 )

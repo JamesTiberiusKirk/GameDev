@@ -27,6 +27,7 @@ run/main_scene="res://scenes/screens/MainMenu/MainMenu.tscn"
 
 Autoload="*res://scripts/autoload.gd"
 Sounds="*res://scripts/sounds.gd"
+HudController="*res://scripts/HUD_controller.gd"
 
 [display]
 
