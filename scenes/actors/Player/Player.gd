@@ -17,6 +17,7 @@ func _physics_process(delta):
 	self.apply_direction(axis)
 	self.look_at(get_look_vect())
 	health_bar.value = health
+	HudController.health = health
 
 func shoot(dir):
 	shooting_sound.play()
