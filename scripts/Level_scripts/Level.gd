@@ -6,7 +6,7 @@ var death_count = 0
 var AI_ammount = 0
 var AI_total = 0
 var player
-
+var can_play_car_sound= true
 signal reset_HUD()
 
 func _ready():
@@ -17,6 +17,9 @@ func _process(delta):
 	AI_ammount = check_for_AI()
 	get_player()
 	if not get_car():
+		if can_play_car_sound:
+			can_play_car_sound = false
+			Sounds.play_car_sound()
 		reset_HUD()
 		Autoload.round_win(self)
 	if not player:

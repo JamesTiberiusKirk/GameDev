@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/paper_snatch.wav-2253dbef0c7ae81f452142deefb18409.sample"
+
+[deps]
+
+source_file="res://assets/audio/paper_snatch.wav"
+dest_files=[ "res://.import/paper_snatch.wav-2253dbef0c7ae81f452142deefb18409.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
