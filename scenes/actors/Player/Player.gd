@@ -3,6 +3,7 @@ extends Actor
 onready var ShootTimer = $ShootTimer
 onready var health_bar = $HealthBar
 onready var shooting_sound = $ShootingSound
+onready var muzzle = $Gun
 onready var bullet = preload("res://scenes/objects/Bullet/Bullet.tscn")
 var can_shoot = true
 
@@ -23,7 +24,7 @@ func shoot(dir):
 	shooting_sound.play()
 	var b = bullet.instance()
 	get_parent().add_child(b)
-	b.fire($Gun.global_position, dir.angle())
+	b.fire(muzzle.global_position, dir.angle())
 
 func handle_shooting():
 	if Input.is_action_pressed("shoot"):

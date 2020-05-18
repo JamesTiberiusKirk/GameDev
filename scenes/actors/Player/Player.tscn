@@ -23,9 +23,13 @@ animations = [ {
 [sub_resource type="Animation" id=3]
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.6, 0.6 )
 collision_layer = 2
 script = ExtResource( 1 )
 fire_rate = 0.246
+
+[node name="Gun" type="Position2D" parent="."]
+position = Vector2( 19.0998, 14.4758 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4, -2 )
@@ -41,9 +45,6 @@ offset = Vector2( 9, -11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/run = SubResource( 3 )
-
-[node name="Gun" type="Position2D" parent="."]
-position = Vector2( 19.0998, 14.4758 )
 
 [node name="ShootTimer" type="Timer" parent="."]
 
