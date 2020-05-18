@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/actors/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/actors/AI_pistol/AI_pistol.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/Levels_EEM.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Level_scripts/Levels_EEM.gd" type="Script" id=4]
 [ext_resource path="res://scenes/actors/AI_rifle/AI_rifle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/actors/AI_melee/AI_melee.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/Document/Document.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/objects/Car/Car.tscn" type="PackedScene" id=8]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource( 4 )
@@ -29,3 +30,6 @@ detect_radius = 450
 
 [node name="Document" parent="." instance=ExtResource( 7 )]
 position = Vector2( 947.227, 189.972 )
+
+[node name="Car" parent="." instance=ExtResource( 8 )]
+position = Vector2( 501.979, 527.826 )

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tilesets/world.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/actors/AI_rifle/AI_rifle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/actors/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/actors/AI_pistol/AI_pistol.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/actors/AI_melee/AI_melee.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/Levels_EEM.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Level_scripts/Levels_EEM.gd" type="Script" id=6]
+[ext_resource path="res://scenes/objects/Car/Car.tscn" type="PackedScene" id=7]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource( 6 )
@@ -161,4 +162,7 @@ rotation = 3.14159
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 963.218, 710.436 )
 rotation = -1.5708
-scale = Vector2( 0.6, 0.6 )
+
+[node name="Car" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1178.55, 674.014 )
+rotation = 1.5708
