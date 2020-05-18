@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/screens/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://scenes/objects/HealthBar/HealthBar.tscn" type="PackedScene" id=2]
 
 [node name="HUD" type="MarginContainer"]
 margin_right = 40.0
@@ -18,6 +19,47 @@ margin_left = 307.497
 margin_top = 20.4444
 margin_right = 307.497
 margin_bottom = 34.4444
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DocLoc" type="Position2D" parent="CanvasLayer"]
+position = Vector2( 1133.09, 31.5688 )
+
+[node name="DocInf" type="Label" parent="CanvasLayer"]
+anchor_left = 0.822
+anchor_top = 0.046
+anchor_right = 0.822
+anchor_bottom = 0.046
+margin_left = -14.3539
+margin_top = -7.17563
+margin_right = 25.6461
+margin_bottom = 6.82437
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource( 2 )]
+margin_left = 40.9951
+margin_top = 559.51
+margin_right = 80.9951
+margin_bottom = 599.51
+rect_scale = Vector2( 7.82223, 3.56362 )
+
+[node name="HealthInfo" type="Label" parent="CanvasLayer"]
+margin_left = 43.4248
+margin_top = 539.469
+margin_right = 83.4248
+margin_bottom = 553.469
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnNotifier" type="Label" parent="CanvasLayer"]
+margin_left = 553.061
+margin_top = 20.8716
+margin_right = 593.061
+margin_bottom = 34.8716
 __meta__ = {
 "_edit_use_anchors_": false
 }
