@@ -11,4 +11,5 @@ mono_crash.*.json
 .directory
 *~
 
-builds/HTMLMobile
+builds/Linux
+builds/Windows
