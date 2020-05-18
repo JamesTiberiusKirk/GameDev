@@ -53,10 +53,12 @@ position = Vector2( 351.567, 844.507 )
 position = Vector2( 351.89, 893.361 )
 
 [node name="AI_rifle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 250.137, 376.626 )
+position = Vector2( 543.304, 143.176 )
+rotation = 3.14159
 
 [node name="AI_rifle2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 252.342, 131.106 )
+position = Vector2( 516.509, 405.436 )
+rotation = -1.5708
 
 [node name="AI_rifle3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 589.014, 217.846 )
