@@ -66,6 +66,9 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MusicTimer" type="Timer" parent="."]
 [connection signal="pressed" from="Menu/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Menu/ChooseLevel" to="." method="_on_ChooseLevel_pressed"]
 [connection signal="pressed" from="Menu/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="timeout" from="MusicTimer" to="." method="_on_MusicTimer_timeout"]

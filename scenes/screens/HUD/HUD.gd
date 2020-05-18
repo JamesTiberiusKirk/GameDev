@@ -5,7 +5,7 @@ onready var enemy_count_lable = $CanvasLayer/EnemyCount
 onready var health_bar = $CanvasLayer/HealthBar
 onready var health_info = $CanvasLayer/HealthInfo
 onready var doc_info = $CanvasLayer/DocInf
-onready var doc_loc = $CanvasLayer/DocLoc
+onready var doc_node = $CanvasLayer/DocNode
 onready var return_notif = $CanvasLayer/ReturnNotifier
 
 onready var doc_texture = load("res://assets/objects/Documents.png")
@@ -40,11 +40,8 @@ func update_doc_info():
 		doc_info.text = "Document Aquired"
 		return_notif.text = "Mission Complete, Return to Car"
 		var sprite = Sprite.new()
-		var node = Node2D.new()
 		sprite.set_texture(doc_texture)
-		node.scale = Vector2(0.1,0.1)
-		node.add_child(sprite)
-		node.position = doc_loc.position
-		canvas.add_child(node)
+		doc_node.scale = Vector2(0.1,0.1)
+		doc_node.add_child(sprite)
 	else:
 		doc_info.text = "Aquire Document"

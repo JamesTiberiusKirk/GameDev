@@ -15,16 +15,17 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="EnemyCount" type="Label" parent="CanvasLayer"]
-margin_left = 307.497
-margin_top = 20.4444
-margin_right = 307.497
-margin_bottom = 34.4444
+margin_left = 33.137
+margin_top = 18.7296
+margin_right = 33.137
+margin_bottom = 32.7296
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DocLoc" type="Position2D" parent="CanvasLayer"]
-position = Vector2( 1133.09, 31.5688 )
+[node name="DocNode" type="Node2D" parent="CanvasLayer"]
+position = Vector2( 1132.53, 31.4915 )
+scale = Vector2( 29.9704, 15.7185 )
 
 [node name="DocInf" type="Label" parent="CanvasLayer"]
 anchor_left = 0.822
@@ -56,10 +57,10 @@ __meta__ = {
 }
 
 [node name="ReturnNotifier" type="Label" parent="CanvasLayer"]
-margin_left = 553.061
-margin_top = 20.8716
-margin_right = 593.061
-margin_bottom = 34.8716
+margin_left = 480.747
+margin_top = 19.7052
+margin_right = 520.747
+margin_bottom = 33.7052
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -10,6 +10,7 @@ extents = Vector2( 9.94597, 14.0549 )
 extents = Vector2( 12.8562, 17.0959 )
 
 [node name="Document" type="KinematicBody2D"]
+scale = Vector2( 1.5, 1.5 )
 collision_layer = 16
 collision_mask = 3
 script = ExtResource( 1 )

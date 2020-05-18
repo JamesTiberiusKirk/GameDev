@@ -39,6 +39,7 @@ HudController="*res://scripts/HUD_controller.gd"
 
 window/size/width=1200
 window/size/height=628
+window/size/resizable=false
 
 [input]
 
